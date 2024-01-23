@@ -9,14 +9,3 @@ spring:
     namespace: default
     connection:
       target: 127.0.0.1:7233
-    workersAutoDiscovery:
-      packages: io.temporal.boston.processorder.frontend
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: prometheus
-  metrics:
-    tags:
-      application: ${spring.application.name}

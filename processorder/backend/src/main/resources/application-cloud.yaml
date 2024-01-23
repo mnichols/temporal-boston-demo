@@ -6,11 +6,14 @@ spring:
   application:
     name: temporal-boston-backend
   temporal:
-    namespace: default
-    connection:
-      target: 127.0.0.1:7233
     workersAutoDiscovery:
       packages: io.temporal.boston.processorder.backend
+    namespace: temporal-demo-oms.sdvdw # https://docs.temporal.io/cloud/#temporal-cloud-namespace-id
+    connection:
+      target: temporal-demo-oms.sdvdw.tmprl.cloud:7233
+      mtls:
+        key-file: /Users/mnichols/certs/temporal-demo-oms.sdvdw.key
+        cert-chain-file: /Users/mnichols/certs/temporal-demo-oms.sdvdw.pem
 
 # (Note following configuration are not set by default but serve more as reference)
 #    workers:

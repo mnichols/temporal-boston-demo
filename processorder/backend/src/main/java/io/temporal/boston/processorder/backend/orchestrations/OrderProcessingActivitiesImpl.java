@@ -35,6 +35,7 @@ public class OrderProcessingActivitiesImpl implements OrderProcessingActivities 
         // make an API request to payment provider
         ChargeResponse response = new ChargeResponse();
         response.setToken(String.format("charge-%s-%s", cmd.getCustomerId(), cmd.getOrderId() ));
+//        throw new RuntimeException("downstream service is down");
         return response;
     }
 

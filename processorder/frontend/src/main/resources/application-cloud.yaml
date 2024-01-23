@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: temporal-boston-backend
+  temporal:
+    namespace: temporal-demo-oms.sdvdw # https://docs.temporal.io/cloud/#temporal-cloud-namespace-id
+    connection:
+      target: temporal-demo-oms.sdvdw.tmprl.cloud:7233
+      mtls:
+        key-file: /Users/mnichols/certs/temporal-demo-oms.sdvdw.key
+        cert-chain-file: /Users/mnichols/certs/temporal-demo-oms.sdvdw.pem

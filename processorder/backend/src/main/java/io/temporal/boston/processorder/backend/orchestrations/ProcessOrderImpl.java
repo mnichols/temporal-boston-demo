@@ -2,6 +2,7 @@ package io.temporal.boston.processorder.backend.orchestrations;
 
 import io.temporal.activity.ActivityOptions;
 import io.temporal.boston.processorder.backend.messaging.*;
+import io.temporal.common.RetryOptions;
 import io.temporal.failure.ApplicationFailure;
 import io.temporal.spring.boot.WorkflowImpl;
 import io.temporal.workflow.Workflow;
@@ -13,6 +14,11 @@ import java.time.Duration;
 public class ProcessOrderImpl implements ProcessOrder {
     OrderProcessingActivities acts = Workflow.newActivityStub(OrderProcessingActivities.class,
             ActivityOptions.newBuilder().setStartToCloseTimeout(Duration.ofSeconds(10)).build());
+//                    setRetryOptions(
+//                            RetryOptions.newBuilder().
+//                                    setMaximumAttempts(3).
+//                                    build())
+//                    .build());
     private Logger logger = Workflow.getLogger(ProcessOrderImpl.class);
     private ChargeResponse chargeResponse;
     private ShipResponse shipmentConfirmation;
@@ -38,4 +44,5 @@ public class ProcessOrderImpl implements ProcessOrder {
                         prepareShipmentResponse.getToken()));
         logger.info("order has been processed");
     }
+    
 }

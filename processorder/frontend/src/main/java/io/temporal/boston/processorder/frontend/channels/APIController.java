@@ -28,14 +28,9 @@ public class APIController {
         for(int i = 0; i < params.getCount(); i++) {
             String orderId = String.format("%s-%s", "order",CUID.randomCUID1());
             String productId = params.getProductId();
-            if(Objects.equals(productId, "")) {
+            if(params.getProductId() == null || Objects.equals(productId, "")) {
                 productId = String.format("%s-%s","product", CUID.randomCUID1());
             }
-            WorkflowOptions opts = WorkflowOptions.newBuilder().
-                    setWorkflowId(orderId).
-                    setTaskQueue("orders").
-                    build();
-            ProcessOrder workflowStub = temporalClient.newWorkflowStub(ProcessOrder.class, opts);
             ProcessOrderRequest request = new ProcessOrderRequest();
             PaymentInfo payment = new PaymentInfo();
             payment.setAccountId(CUID.randomCUID1().toString());
