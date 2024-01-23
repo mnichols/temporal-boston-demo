@@ -4,13 +4,13 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: temporal-boston-backend
+    name: temporal-boston-frontend
   temporal:
     namespace: default
     connection:
       target: 127.0.0.1:7233
     workersAutoDiscovery:
-      packages: io.temporal.boston.processorder.backend
+      packages: io.temporal.boston.processorder.frontend
 
 management:
   endpoints:

@@ -1,11 +1,4 @@
 rootProject.name = 'temporal-boston-demo'
-include 'requestreply'
-include 'requestreply:frontend'
-include 'requestreply:backend'
-include 'processorder'
-include 'processorder'
 include 'processorder:backend'
-findProject(':processorder:backend')?.name = 'backend'
-include 'requestreply:frontend'
-findProject(':requestreply:frontend')?.name = 'frontend'
+include 'processorder:frontend'
 
