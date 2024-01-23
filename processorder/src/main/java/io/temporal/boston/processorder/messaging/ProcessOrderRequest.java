@@ -4,7 +4,26 @@ public class ProcessOrderRequest {
     public ProcessOrderRequest() {
     }
 
-    public String orderId;
+    private String orderId;
+    private String productId;
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    private String customerId;
 
     public PaymentInfo getPaymentInfo() {
         return paymentInfo;
