@@ -1,7 +1,7 @@
-package io.temporal.boston.processorder.orchestrations;
+package io.temporal.boston.processorder.backend.orchestrations;
 
 import io.temporal.activity.ActivityInterface;
-import io.temporal.boston.processorder.messaging.*;
+import io.temporal.boston.processorder.backend.messaging.*;
 
 @ActivityInterface
 public interface OrderProcessingActivities {

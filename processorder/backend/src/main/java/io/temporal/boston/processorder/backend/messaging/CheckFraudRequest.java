@@ -1,4 +1,4 @@
-package io.temporal.boston.processorder.messaging;
+package io.temporal.boston.processorder.backend.messaging;
 
 public class CheckFraudRequest {
     private  String customerId;

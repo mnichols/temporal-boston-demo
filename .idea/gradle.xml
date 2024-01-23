@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/processorder" />
+            <option value="$PROJECT_DIR$/processorder/backend" />
             <option value="$PROJECT_DIR$/requestreply" />
             <option value="$PROJECT_DIR$/requestreply/backend" />
             <option value="$PROJECT_DIR$/requestreply/frontend" />
