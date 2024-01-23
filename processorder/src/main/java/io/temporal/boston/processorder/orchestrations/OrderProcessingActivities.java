@@ -7,8 +7,6 @@ import io.temporal.boston.processorder.messaging.*;
 public interface OrderProcessingActivities {
     CheckFraudResponse checkFraud(CheckFraudRequest cmd);
     PrepareShipmentResponse prepareShipment(PrepareShipmentRequest cmd);
-
     ChargeResponse charge(ChargeRequest cmd);
-
     ShipResponse ship(ShipRequest cmd);
 }

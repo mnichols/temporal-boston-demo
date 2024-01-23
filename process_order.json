@@ -1,0 +1,8 @@
+{
+  "customerId": "mike_123",
+  "orderId": "order_123",
+  "paymentInfo": {
+    "accountId": "acct_123",
+    "authorizedFundsToken": "tok_123"
+  }
+}

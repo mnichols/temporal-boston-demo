@@ -10,7 +10,7 @@ spring:
     connection:
       target: 127.0.0.1:7233
     workersAutoDiscovery:
-      packages: io.temporal.boston.processorder
+      packages: io.temporal.boston.processorder.orchestrations
 
 management:
   endpoints:
