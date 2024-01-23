@@ -44,5 +44,10 @@ public class ProcessOrderImpl implements ProcessOrder {
                         prepareShipmentResponse.getToken()));
         logger.info("order has been processed");
     }
-    
+
+    @Override
+    public String getTrackingNumber() {
+        return shipmentConfirmation.getTrackingNumber();
+    }
+
 }

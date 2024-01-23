@@ -9,4 +9,7 @@ import io.temporal.workflow.WorkflowMethod;
 public interface ProcessOrder {
     @WorkflowMethod
     void execute(ProcessOrderRequest params);
+
+    @QueryMethod
+    String getTrackingNumber();
 }
